@@ -22,6 +22,10 @@ import {
     serverTimestamp,
     limit
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+import { getAnalytics, logEvent } from
+"https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+const analytics = getAnalytics(app);
+
 
 // ================= CONFIG =================
 const firebaseConfig = {
@@ -475,6 +479,8 @@ document.addEventListener("DOMContentLoaded", () => {
         window.open("facemash.html", "_blank");
     });
 });
+logEvent(analytics, "page_view_test");
+
 
 
 
