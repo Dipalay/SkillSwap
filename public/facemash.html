@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Facemash</title>
+<link rel="stylesheet" href="facemash.css">
+</head>
+<body>
+
+<h1>FACEMASH</h1>
+<p>Who's hotter?</p>
+<hr>
+
+<div class="container">
+  <div class="card" onclick="vote(0)">
+    <img id="imgA">
+    <p id="nameA"></p>
+  </div>
+
+  <div class="card" onclick="vote(1)">
+    <img id="imgB">
+    <p id="nameB"></p>
+  </div>
+</div>
+
+<p>
+  <a href="scoreboard.html">Zobacz ranking</a>
+</p>
+
+<script src="facemash.js"></script>
+</body>
+</html>

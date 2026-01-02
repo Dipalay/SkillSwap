@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Ranking</title>
+<style>
+body {
+  font-family: Arial;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 10px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card img {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+}
+</style>
+</head>
+<body>
+
+<h1>🏆 Ranking Facemash</h1>
+
+<div id="list"></div>
+
+<script>
+const profiles = JSON.parse(localStorage.getItem("profiles")) || [];
+profiles.sort((a,b) => b.elo - a.elo);
+
+const list = document.getElementById("list");
+
+profiles.forEach((p, i) => {
+  const div = document.createElement("div");
+  div.className = "card";
+  div.innerHTML = `
+    <strong>#${i+1}</strong>
+    <img src="${p.img}">
+    <div>
+      <strong>${p.name}</strong><br>
+      ELO: ${p.elo}
+    </div>
+  `;
+  list.appendChild(div);
+});
+</script>
+
+</body>
+</html>

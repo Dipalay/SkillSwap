@@ -1,0 +1,100 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Times New Roman", serif;
+  background: #f0f0f0;
+  color: #000;
+  text-align: center;
+}
+
+/* ===== HEADER ===== */
+h1 {
+  font-size: 48px;
+  margin-bottom: 5px;
+}
+
+p {
+  margin-top: 0;
+}
+
+hr {
+  width: 420px;
+  border: none;
+  border-top: 1px solid #000;
+  margin: 10px auto 30px;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+/* ===== PROFILE CARD ===== */
+.card {
+  cursor: pointer;
+  user-select: none;
+}
+
+.card img {
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  border: 2px solid #000;
+  background: #ddd;
+}
+
+.card p {
+  margin-top: 6px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ===== HOVER (subtelny, retro) ===== */
+.card:hover img {
+  filter: brightness(0.95);
+}
+
+/* ===== FOOTER LINKS ===== */
+a {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #000;
+  text-decoration: underline;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .container {
+    gap: 20px;
+  }
+
+  .card img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+
+  hr {
+    width: 90%;
+  }
+}

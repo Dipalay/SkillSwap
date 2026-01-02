@@ -467,6 +467,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const ad = document.getElementById("facemashAd");
+    if (!ad) return;
+
+    ad.addEventListener("click", () => {
+        window.open("facemash.html", "_blank");
+    });
+});
+
+
 
 
 
