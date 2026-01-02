@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>SkillSwap</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h1>SkillSwap</h1>
+
+<button id="loginBtn">Zaloguj przez Google</button>
+<button id="logoutBtn" hidden>Wyloguj</button>
+<div id="profile" hidden>
+  <input id="name" placeholder="Imiono" />
+  <input id="year" placeholder="Rok studiów" />
+  <input id="teach" placeholder="Mogę nauczyć (oddziel przecinkami)" />
+  <input id="learn" placeholder="Chcę się nauczyć" />
+  <button id="saveProfile">Zapisz profil</button>
+</div>
+
+<div id="myProfile" class="card" hidden>
+  <h3>Mój profil</h3>
+  <div id="myProfileContent"></div>
+</div>
+
+<div id="unreadBox" class="card">
+  <h3>Wiadomości</h3>
+  <div id="unreadList"></div>
+</div>
+
+<h2>Feed</h2>
+<div id="feed"></div>
+
+<script type="module" src="app.js"></script>
+
+
+<div id="chat" hidden>
+  <h2>Czat</h2>
+  <div id="chatHeader">
+    <button id="closeChat">← Wróć</button>
+    <h3>Czat</h3>
+    <button id="closeChatDesktop">✖</button>
+  </div>
+
+  <div id="messages"></div>
+
+  <div id="chatInput">
+    <textarea id="msgInput" placeholder="Napisz wiadomość..."></textarea>
+    <button id="sendMsg">Wyślij</button>
+  </div>
+</div>
+
+
+<div id="recentUsers" class="card">
+  <h3>Ostatnio dodane</h3>
+  <div id="recentList"></div>
+</div>
+
+
+</body>
+</html>
